@@ -7,7 +7,7 @@ pattern{
 }
 
 title{
-    2 склонение
+    Второе склонение
 }
 
 description{

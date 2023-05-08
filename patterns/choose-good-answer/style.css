@@ -1,5 +1,5 @@
 p, label, option, select {
-  font-size:19px
+  font-size:50px
 }
 
 #select_lang{
@@ -9,4 +9,10 @@ p, label, option, select {
 #counter{
   display:inline-block;
   align-content:right
+}
+
+@media screen and (max-width: 800px) {
+  p,label,option,select{
+    font-size: 20px;
+  }
 }

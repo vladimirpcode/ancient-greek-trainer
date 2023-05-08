@@ -1,0 +1,18 @@
+p, label, option, select, a {
+    font-size:30px
+}
+  
+#select_lang{
+    display:inline-block;
+}
+
+#counter{
+    display:inline-block;
+    align-content:right
+}
+  
+@media screen and (max-width: 800px) {
+    p,label,option,select, a{
+        font-size: 20px;
+    }
+}

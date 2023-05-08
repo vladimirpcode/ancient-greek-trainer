@@ -57,18 +57,20 @@ def parse(data):
 
 def generate_main_index_html(lesson_numbers):
 	f = open(r"../index.html", "w")
-	f.write("<!DOCTYPE html><html><head><meta charset='utf-8'/></head><body>")
+	f.write("<!DOCTYPE html><html><head><link rel='stylesheet' href='css/font-size.css'/><meta charset='utf-8'/></head><body>")
 	for i in lesson_numbers:
 		f.write("<a href='lessons/" + str(i) + "/index.html'>Урок " + str(i) + "</a><br><br>")
 	f.write("</body></html>")
 	f.close()
+
+
 def pattern_choose_good_answer(filename, title, description, lesson, data, params):
 	pre = """
 	<!DOCTYPE html>
 	<html>
 	<head>
 	  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-	  <link rel="stylesheet" href="styles/style.css"/>
+	  <link rel="stylesheet" href="../../patterns/choose-good-answer/style.css"/>
 	  <title>2 склонение</title>
 	</head>
 	<body>
@@ -188,7 +190,7 @@ generate_main_index_html(lesson_numbers)
 # формируем index.html в каждом уоке
 for num in lesson_numbers:
 	f = open(pages_path + r"/" + str(num) + "/index.html", "w")
-	f.write("<!DOCTYPE html><html><head><meta charset='utf-8'/></head><body>")
+	f.write("<!DOCTYPE html><html><head><link rel='stylesheet' href='../../css/font-size.css'/><meta charset='utf-8'/></head><body>")
 	i = 0;
 	while i < len(lesson_files[str(num)]):
 		f.write("<a href='" + lesson_files[str(num)][i] + "'>" + lesson_files[str(num)][i+1] + "</a><br><br>")
