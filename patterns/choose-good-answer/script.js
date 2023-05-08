@@ -8,18 +8,25 @@ let multiword = false
 
 //[min, max)
 function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min;
+    min = Math.ceil(min)
+    max = Math.floor(max)
+    return Math.floor(Math.random() * (max - min) + min)
 }
 
 function shuffleArray(arr){
+    //console.log(1010)
+    console.log("debug mega: " +  arr.length)
     for(let i = 0; i < 30; i++){
         index1 = -1
         index2 = -1
+        //console.log(345)
+        //console.log(arr.length)
         while(index1 == index2){
+            //console.log("debug: rere")
             index1 = getRandomInt(0, arr.length)
             index2 = getRandomInt(0, arr.length)
+            console.log(index1 + " " + index2)
+            
         }
         tmp = arr[index1]
         arr[index1] = arr[index2]
@@ -93,8 +100,8 @@ function generate(){
         }
     }
     let minAnswers
-    if (langFrom.length <= 4) {
-		minAnswers = 0
+    if (langFrom.length < 4) {
+		minAnswers = langFrom.length
 	} else {
 		minAnswers = 4
 	}
@@ -110,6 +117,7 @@ function generate(){
         let flag = false
         let randIndex = -1
         while(!flag){
+            console.log("debug: 123")
             randIndex = getRandomInt(0, langFrom.length)
             flag = true
             for(let k = 0; k < answers.length; k++){
