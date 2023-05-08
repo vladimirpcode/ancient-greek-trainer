@@ -57,7 +57,7 @@ def parse(data):
 
 def generate_main_index_html(lesson_numbers):
 	f = open(r"../index.html", "w")
-	f.write("<!DOCTYPE html><html><body>")
+	f.write("<!DOCTYPE html><html><head><meta charser='utf-8'/></head><body>")
 	for i in lesson_numbers:
 		f.write("<a href='lessons/" + str(i) + "/index.html'>Урок " + str(i) + "</a><br><br>")
 	f.write("</body></html>")
@@ -188,7 +188,7 @@ generate_main_index_html(lesson_numbers)
 # формируем index.html в каждом уоке
 for num in lesson_numbers:
 	f = open(pages_path + r"/" + str(num) + "/index.html", "w")
-	f.write("<!DOCTYPE html><html><body>")
+	f.write("<!DOCTYPE html><html><head><meta charser='utf-8'/></head><body>")
 	i = 0;
 	while i < len(lesson_files[str(num)]):
 		f.write("<a href='" + lesson_files[str(num)][i] + "'>" + lesson_files[str(num)][i+1] + "</a><br><br>")
