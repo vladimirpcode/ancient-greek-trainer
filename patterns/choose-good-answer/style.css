@@ -1,0 +1,12 @@
+p, label, option, select {
+  font-size:19px
+}
+
+#select_lang{
+  display:inline-block;
+}
+
+#counter{
+  display:inline-block;
+  align-content:right
+}
