@@ -100,12 +100,17 @@ function generate(){
         }
     }
     let minAnswers
+    let maxAnswers
+    minAnswers = 4
     if (langFrom.length < 4) {
 		minAnswers = langFrom.length
-	} else {
-		minAnswers = 4
-	}
-    let answersNumber = getRandomInt(minAnswers, langFrom.length)
+	} 
+    maxAnswers = 11
+    if (langFrom.length < 10) {
+        maxAnswers = langFrom.length
+    }
+    
+    let answersNumber = getRandomInt(minAnswers, maxAnswers)
     let goodAnswerIndex = getRandomInt(0, langFrom.length)
     let question = document.createElement("p")
     question.innerText = langFrom[goodAnswerIndex]
